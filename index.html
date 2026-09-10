@@ -3,15 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAND LENS</title>
+    <title>LAND LENS | Government of India</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Ionicons (SVG-based, no icon-font loading issues) -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    <section class="hero-section">
-        <div id="header-hero"></div>
-        <div id="land-text">Land</div>
-        <div id="lens-text">Lens</div>
-        <div id="india-map-animation"></div>
+    <div id="chat-bot-icon"></div>
+    <header class="main-header" id="main-header">
+        <div class="logo">
+            <ion-icon name="business-outline" class="emblem"></ion-icon>
+            <div class="logo-text">
+                <span class="title">LAND LENS</span>
+                <span class="subtitle"></span>
+            </div>
+        </div>
+        <nav class="nav-section">
+            <ul class="nav-list">
+                <li><a href="#home-section"><ion-icon name="home-outline"></ion-icon> HOME</a></li>
+                <li><a href="#dataset-section"><ion-icon name="server-outline"></ion-icon> DATASET</a></li>
+                <li><a href="#policy-section"><ion-icon name="document-text-outline"></ion-icon> POLICY</a></li>
+                <li><a href="#about-section">ABOUT</a></li>
+            </ul>
+        </nav>
+        <div class="digital-india-logo">
+            <span>Digital India</span>
+        </div>
+    </header>
+
+    <section class="hero-section" id="home-section">
+        <img src="url/hero-bg2.jpg" alt="Indian Soil and Farm Land" id="hero-img">
+
+        <div class="hero-content">
+            <h1 id="land-lens-text">EARTH DATA INTELLIGENCE</h1>
+            <p id="hero-description">
+                Access comprehensive, high-resolution land related datasets and analytical guidelines <br>for sustainable research and national development.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="#dataset-section" class="btn btn-primary">EXPLORE DATASETS <ion-icon name="arrow-forward-outline"></ion-icon></a>
+                <a href="#policy-section" class="btn btn-secondary">VIEW POLICIES</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="dataset-section" class="dataset-section">
+        <div class="section-container">
+            <div class="dataset-header">
+                <h2 class="section-title">Datasets</h2>
+                <div class="dataset-controls">
+                    <div class="search-bar">
+                        <ion-icon name="search-outline"></ion-icon>
+                        <input type="text" id="searchInput" placeholder="Search datastes (eg: Soil Health)">
+                    </div>
+                    <button class="filter-btn">
+                        <ion-icon name="filter-outline"></ion-icon>
+                    </button>
+                </div>
+            </div>
+
+            <div class="dataset-grid" id="dataset-grid"></div>
+        </div>
+    </section>
+    <section id="policy-section">
+        <p>POLICY</p>
+    </section>
+    <section id="about-section">
+        <p>ABOUT</p>
     </section>
     <script src="script.js"></script>
 </body>
