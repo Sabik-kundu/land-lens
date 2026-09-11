@@ -8,37 +8,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Ionicons (SVG-based, no icon-font loading issues) -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    <div id="chat-bot-icon"></div>
+    <div id="chat-bot-icon"><ion-icon name="chatbubbles-outline" id="chatbubble-icon"></ion-icon></div>
     <header class="main-header" id="main-header">
         <div class="logo">
             <ion-icon name="business-outline" class="emblem"></ion-icon>
             <div class="logo-text">
-                <span class="title">LAND LENS</span>
+                <span class="title"><p id="land-text">LAND </p><p id="lens-text"> LENS</p></span>
                 <span class="subtitle"></span>
             </div>
         </div>
         <nav class="nav-section">
             <ul class="nav-list">
-                <li><a href="#home-section"><ion-icon name="home-outline"></ion-icon> HOME</a></li>
-                <li><a href="#dataset-section"><ion-icon name="server-outline"></ion-icon> DATASET</a></li>
-                <li><a href="#policy-section"><ion-icon name="document-text-outline"></ion-icon> POLICY</a></li>
+                <li><a href="#home-section"><ion-icon name="home-outline" class="nav-icons"></ion-icon> HOME</a></li>
+                <li><a href="#dataset-section"><ion-icon name="server-outline" class="nav-icons"></ion-icon> DATASET</a></li>
+                <li><a href="#policy-section"><ion-icon name="document-text-outline" class="nav-icons"></ion-icon> POLICY</a></li>
                 <li><a href="#about-section">ABOUT</a></li>
             </ul>
         </nav>
         <div class="digital-india-logo">
-            <span>Digital India</span>
+            <span class="">Digital India</span>
         </div>
     </header>
 
     <section class="hero-section" id="home-section">
-        <img src="url/hero-bg2.jpg" alt="Indian Soil and Farm Land" id="hero-img">
+        <div class="img-aside">
+            <img src="url/hero-bg2.jpg" alt="Indian Soil and Farm Land" id="hero-img">
+        </div>
 
         <div class="hero-content">
+            <img src="url/India_outline.svg" alt="" id="india-outline-bg" aria-hidden="true">
             <h1 id="land-lens-text">INDIA LAND DATA</h1>
             <p id="hero-description">
                 Access comprehensive, high-resolution land related datasets and analytical guidelines <br>for sustainable research and national development.
@@ -50,6 +52,8 @@
             </div>
         </div>
     </section>
+
+    <hr>
 
     <section id="dataset-section" class="dataset-section">
         <div class="section-container">
@@ -67,6 +71,8 @@
             </div>
 
             <div class="dataset-grid" id="dataset-grid"></div>
+
+            <div class="pagination" id="pagination"></div>
         </div>
     </section>
     <section id="policy-section">
