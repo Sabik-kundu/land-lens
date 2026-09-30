@@ -1,86 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAND LENS | Government of India</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LAND LENS</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    <div id="chat-bot-icon"><ion-icon name="chatbubbles-outline" id="chatbubble-icon"></ion-icon></div>
-    <header class="main-header" id="main-header">
-        <div class="logo">
-            <ion-icon name="business-outline" class="emblem"></ion-icon>
-            <div class="logo-text">
-                <span class="title"><p id="land-text">LAND </p><p id="lens-text"> LENS</p></span>
-                <span class="subtitle"></span>
-            </div>
-        </div>
-        <nav class="nav-section">
-            <ul class="nav-list">
-                <li><a href="#home-section"><ion-icon name="home-outline" class="nav-icons"></ion-icon> HOME</a></li>
-                <li><a href="#dataset-section"><ion-icon name="server-outline" class="nav-icons"></ion-icon> DATASET</a></li>
-                <li><a href="#policy-section"><ion-icon name="document-text-outline" class="nav-icons"></ion-icon> POLICY</a></li>
-                <li><a href="#about-section">ABOUT</a></li>
-            </ul>
-        </nav>
-        <div class="digital-india-logo">
-            <span class="">Digital India</span>
-        </div>
-    </header>
+<div id="progress"></div>
 
-    <section class="hero-section" id="home-section">
-        <div class="img-aside">
-            <img src="url/hero-bg2.jpg" alt="Indian Soil and Farm Land" id="hero-img">
-        </div>
+<header class="main-header" id="main-header">
+  <a class="logo" href="#home-section">
+    <ion-icon name="business-outline" class="emblem"></ion-icon>
+    <span class="title"><span id="land-text">LAND</span> <span id="lens-text">LENS</span></span>
+  </a>
+  <nav class="nav-section">
+    <ul class="nav-list">
+      <li><a href="#home-section"><ion-icon name="home-outline"></ion-icon>Home</a></li>
+      <li><a href="#dataset-section"><ion-icon name="server-outline"></ion-icon>Dataset</a></li>
+      <li><a href="#policy-section"><ion-icon name="document-text-outline"></ion-icon>Policy</a></li>
+      <li><a href="#about-section"><ion-icon name="book-outline"></ion-icon>About</a></li>
+    </ul>
+  </nav>
+  <div class="digital-india-logo">Digital India</div>
+</header>
 
-        <div class="hero-content">
-            <img src="url/India_outline.svg" alt="" id="india-outline-bg" aria-hidden="true">
-            <h1 id="land-lens-text">INDIA LAND DATA</h1>
-            <p id="hero-description">
-                Access comprehensive, high-resolution land related datasets and analytical guidelines <br>for sustainable research and national development.
-            </p>
+<section class="hero-section" id="home-section">
+  <div class="hero-content">
+    <img src="url/India_outline.svg" alt="" id="india-outline-bg" aria-hidden="true" />
+    <h1 id="land-lens-text">India land data</h1>
+    <div class="tricolor" id="hero-bar"><i></i><i></i><i></i></div>
+    <p id="hero-description">Access comprehensive, high-resolution land related datasets and analytical guidelines for sustainable research and national development.</p>
+    <div class="cta-buttons">
+      <a href="#dataset-section" class="btn btn-primary magnetic">Explore datasets <ion-icon name="arrow-forward-outline"></ion-icon></a>
+      <a href="#policy-section" class="btn btn-secondary magnetic">View policies</a>
+    </div>
+  </div>
 
-            <div class="cta-buttons">
-                <a href="#dataset-section" class="btn btn-primary">EXPLORE DATASETS <ion-icon name="arrow-forward-outline"></ion-icon></a>
-                <a href="#policy-section" class="btn btn-secondary">VIEW POLICIES</a>
-            </div>
-        </div>
-    </section>
+  <div class="img-aside" id="img-aside">
+    <div class="photo" id="photo"><img src="url/hero-bg2.jpg" alt="Indian soil and farm land" id="hero-img" /></div>
+  </div>
 
-    <hr>
+  <div class="hero-facts" id="hero-facts">
+    <div><h3>Datasets</h3><p>Land use, cultivation and utilization tables, free to download as CSV.</p></div>
+    <div><h3>Policies</h3><p>Acts, schemes and guidelines on land records, forests, water and acquisition.</p></div>
+    <div><h3>Sources</h3><p>Published from state and central land authorities.</p></div>
+  </div>
+</section>
 
-    <section id="dataset-section" class="dataset-section">
-        <div class="section-container">
-            <div class="dataset-header">
-                <h2 class="section-title">Datasets</h2>
-                <div class="dataset-controls">
-                    <div class="search-bar">
-                        <ion-icon name="search-outline"></ion-icon>
-                        <input type="text" id="searchInput" placeholder="Search datastes (eg: Soil Health)">
-                    </div>
-                    <button class="filter-btn">
-                        <ion-icon name="filter-outline"></ion-icon>
-                    </button>
-                </div>
-            </div>
+<section id="dataset-section" class="dataset-section">
+  <div class="section-container">
+    <div class="dataset-header">
+      <h2 class="section-title">Datasets</h2>
+      <div class="dataset-controls">
+        <label class="search-bar">
+          <ion-icon name="search-outline"></ion-icon>
+          <input type="text" id="searchInput" placeholder="Search datasets (e.g. Soil Health)" />
+        </label>
+        <button class="filter-btn" id="filter-btn" type="button" title="Filter by category">
+          <ion-icon name="filter-outline"></ion-icon><span id="filter-label">All</span>
+        </button>
+      </div>
+    </div>
+    <div class="dataset-grid" id="dataset-grid"></div>
+    <div class="pagination" id="pagination"></div>
+  </div>
+</section>
 
-            <div class="dataset-grid" id="dataset-grid"></div>
+<section id="policy-section" class="policy-section">
+  <div class="section-container">
+    <div class="policy-header">
+      <h2 class="section-title">Policies</h2>
+      <div class="policy-controls">
+        <label class="search-bar">
+          <ion-icon name="search-outline"></ion-icon>
+          <input type="text" id="searchPolicyInput" placeholder="Search policies (e.g. Land Reform Acts)" />
+        </label>
+      </div>
+    </div>
+    <div class="policy-grid" id="policy-grid"></div>
+    <div class="pagination" id="policy-pagination"></div>
+  </div>
+</section>
 
-            <div class="pagination" id="pagination"></div>
-        </div>
-    </section>
-    <section id="policy-section">
-        <p>POLICY</p>
-    </section>
-    <section id="about-section">
-        <p>ABOUT</p>
-    </section>
-    <script src="script.js"></script>
+<section id="about-section" class="about-section">
+  <div class="section-container">
+    <div class="about-header">
+      <h2 class="section-title">About Land Lens</h2>
+      <p class="about-intro" id="about-intro">Land Lens is a unified national platform for accessing, analyzing, and understanding India's land-related data — built to support researchers, policymakers, and citizens in making informed decisions about sustainable land use.</p>
+    </div>
+
+    <div class="about-stats" id="about-stats">
+      <div class="stat-card"><span class="stat-number" data-target="28">0</span><span class="stat-label">States covered</span></div>
+      <div class="stat-card"><span class="stat-number" data-target="150">0</span><span class="stat-label">Datasets published</span></div>
+      <div class="stat-card"><span class="stat-number" data-target="40">0</span><span class="stat-label">Policies tracked</span></div>
+      <div class="stat-card"><span class="stat-number" data-target="2" data-suffix="M+">0</span><span class="stat-label">Land records digitized</span></div>
+    </div>
+
+    <div class="about-features">
+      <div class="feature-card"><ion-icon name="analytics-outline"></ion-icon><h3>Data-driven</h3><p>High-resolution, verified datasets sourced directly from state and central land authorities.</p></div>
+      <div class="feature-card"><ion-icon name="shield-checkmark-outline"></ion-icon><h3>Transparent</h3><p>Open access to policies, guidelines, and records in line with the Digital India initiative.</p></div>
+      <div class="feature-card"><ion-icon name="people-outline"></ion-icon><h3>Citizen first</h3><p>Designed for researchers, farmers, and administrators alike, with no barriers to entry.</p></div>
+      <div class="feature-card"><ion-icon name="sync-outline"></ion-icon><h3>Regularly updated</h3><p>Datasets and policy records are refreshed on a continuing basis as new surveys are completed.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="footer">
+  <div class="footer-mark" id="footer-mark" aria-hidden="true">LAND LENS</div>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo"><ion-icon name="business-outline" class="emblem"></ion-icon><span class="footer-logo-text"><span id="footer-land">LAND</span> <span id="footer-lens">LENS</span></span></div>
+      <p>An initiative under the Digital India programme, providing unified access to national land data and policy resources.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick links</h4>
+      <ul><li><a href="#home-section">Home</a></li><li><a href="#dataset-section">Datasets</a></li><li><a href="#policy-section">Policies</a></li><li><a href="#about-section">About</a></li></ul>
+    </div>
+    <div class="footer-links">
+      <h4>Resources</h4>
+      <ul><li><a href="#">Data usage guidelines</a></li><li><a href="#">API documentation</a></li><li><a href="#">Privacy policy</a></li><li><a href="#">Terms of service</a></li></ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><ion-icon name="mail-outline"></ion-icon> support@landlens.gov.in</p>
+      <p><ion-icon name="call-outline"></ion-icon> 1800-XXX-XXXX</p>
+      <div class="footer-social">
+        <a href="#" title="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="#" title="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="#" title="YouTube"><ion-icon name="logo-youtube"></ion-icon></a>
+      </div>
+    </div>
+  </div>
+  <div class="tricolor footer-bar" id="footer-bar"><i></i><i></i><i></i></div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="footer-year"></span> Land Lens — Government of India. All rights reserved.</p>
+    <div class="digital-india-logo"><span>Digital India</span></div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="motion.js"></script>
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+<!-- config.js is generated from .env by build-config.js (run: npm run config) -->
+<script src="config.js"></script>
+<script type="module">
+  import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
+
+  const cfg = window.ENV || {};
+
+  if (!cfg.FLOWISE_CHATFLOW_ID) {
+    console.warn("Chatbot disabled: config.js is missing or FLOWISE_CHATFLOW_ID is empty. Run 'npm run config'.");
+  } else {
+    Chatbot.init({
+      chatflowid: cfg.FLOWISE_CHATFLOW_ID,
+      apiHost: cfg.FLOWISE_HOST || "https://cloud.flowiseai.com",
+      theme: {
+        button: { backgroundColor: "#000080", right: 20, bottom: 20, size: 55, iconColor: "#ffffff", autoWindowOpen: { autoOpen: false } },
+        chatWindow: {
+          showTitle: true, title: "LAND LENS Assistant",
+          titleAvatarSrc: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png",
+          welcomeMessage: "Hello! I can help you find land datasets, policies, and guidelines. What are you looking for?",
+          backgroundColor: "#f8f9fb", height: 650, width: 400, fontSize: 15, poweredByTextColor: "#6b7684",
+          botMessage: { backgroundColor: "#ffffff", textColor: "#0a0e17", showAvatar: true, avatarSrc: "https://cdn-icons-png.flaticon.com/512/4712/4712109.png" },
+          userMessage: { backgroundColor: "#000080", textColor: "#ffffff", showAvatar: false },
+          textInput: { placeholder: "Ask about datasets or policies...", backgroundColor: "#ffffff", textColor: "#0a0e17", sendButtonColor: "#046a38", maxChars: 1000 }
+        }
+      }
+    });
+  }
+</script>
 </body>
 </html>
