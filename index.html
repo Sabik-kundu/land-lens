@@ -150,31 +150,8 @@
 
 <!-- config.js is generated from .env by build-config.js (run: npm run config) -->
 <script src="config.js"></script>
-<script type="module">
-  import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
 
-  const cfg = window.ENV || {};
-
-  if (!cfg.FLOWISE_CHATFLOW_ID) {
-    console.warn("Chatbot disabled: config.js is missing or FLOWISE_CHATFLOW_ID is empty. Run 'npm run config'.");
-  } else {
-    Chatbot.init({
-      chatflowid: cfg.FLOWISE_CHATFLOW_ID,
-      apiHost: cfg.FLOWISE_HOST || "https://cloud.flowiseai.com",
-      theme: {
-        button: { backgroundColor: "#000080", right: 20, bottom: 20, size: 55, iconColor: "#ffffff", autoWindowOpen: { autoOpen: false } },
-        chatWindow: {
-          showTitle: true, title: "LAND LENS Assistant",
-          titleAvatarSrc: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png",
-          welcomeMessage: "Hello! I can help you find land datasets, policies, and guidelines. What are you looking for?",
-          backgroundColor: "#f8f9fb", height: 650, width: 400, fontSize: 15, poweredByTextColor: "#6b7684",
-          botMessage: { backgroundColor: "#ffffff", textColor: "#0a0e17", showAvatar: true, avatarSrc: "https://cdn-icons-png.flaticon.com/512/4712/4712109.png" },
-          userMessage: { backgroundColor: "#000080", textColor: "#ffffff", showAvatar: false },
-          textInput: { placeholder: "Ask about datasets or policies...", backgroundColor: "#ffffff", textColor: "#0a0e17", sendButtonColor: "#046a38", maxChars: 1000 }
-        }
-      }
-    });
-  }
-</script>
+<script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/10/30/16/20261030162954-3K6OLZUR.js" defer></script>
 </body>
 </html>
